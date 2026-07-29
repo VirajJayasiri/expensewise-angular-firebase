@@ -1,1 +1,62 @@
-<p>main-layout works!</p>
+<mat-toolbar class="app-toolbar">
+  <a class="brand" routerLink="/dashboard">
+    <mat-icon>account_balance_wallet</mat-icon>
+    <span>ExpenseWise</span>
+  </a>
+
+  <nav class="navigation" aria-label="Main navigation">
+    <a
+      mat-button
+      routerLink="/dashboard"
+      routerLinkActive="active-link"
+    >
+      Dashboard
+    </a>
+
+    <a
+      mat-button
+      routerLink="/transactions"
+      routerLinkActive="active-link"
+    >
+      Transactions
+    </a>
+
+    <a
+      mat-button
+      routerLink="/reports"
+      routerLinkActive="active-link"
+    >
+      Reports
+    </a>
+
+    <a
+      mat-button
+      routerLink="/categories"
+      routerLinkActive="active-link"
+    >
+      Categories
+    </a>
+
+    <a
+      mat-button
+      routerLink="/settings"
+      routerLinkActive="active-link"
+    >
+      Settings
+    </a>
+  </nav>
+
+  <a mat-flat-button routerLink="/transactions/new">
+    <mat-icon>add</mat-icon>
+    Add Transaction
+  </a>
+</mat-toolbar>
+
+<main class="page-container">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  <span>ExpenseWise</span>
+  <span>Firebase project: {{ firebaseProjectId }}</span>
+</footer>
